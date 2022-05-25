@@ -1,0 +1,417 @@
+/*common*/
+@font-face {
+	font-family: 'Graphik';
+	src: local('../fonts/Graphik Regular'), local('Graphik-Regular'),
+	url('../fonts/Graphik-Regular.woff2') format('woff2'),
+	url('../fonts/Graphik-Regular.woff') format('woff'),
+	url('../fonts/Graphik-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+* {
+	outline: none;
+	outline-offset: 0;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	scroll-behavior: smooth;
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+	min-width: 300px;
+	background: #F3F4F6;
+	font-family: 'Graphik', sans-serif;
+}
+
+h2 {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 24px;
+	margin-bottom: 16px;
+}
+
+.display-none {
+	display: none;
+}
+
+.br8 {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -khtml-border-radius: 8px;
+  border-radius: 8px;
+}
+
+.btn {
+	border-radius: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 40px;
+	width: 100%;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+.seeAll {
+	position: absolute;
+	right: 8px;
+	top: 4px;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	cursor: pointer;
+}
+
+.printCare .seeAll,
+.plantsAndFlowers .seeAll{
+	color: #6BA91A;
+}
+
+/*header*/
+header {
+	height: 72px;
+	background: #111827;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.header__logo {
+	margin-left: 8px;
+}
+
+header .pull-right {
+	margin-right: 17px;
+}
+
+header .pull-right > img:not(:first-child) {
+	margin-left: 30px;
+}
+
+.header__menu {
+	background: #111827;
+	color: #FFFFFF;
+	width: 100%;
+	position: absolute;
+	top: 72px;
+	height: 100%;
+	z-index: 1;
+	padding: 16px 8px;
+}
+
+.header__menu .btn {
+	background: #1F2937;
+	font-size: 14px;
+}
+
+.header__menu .btn img {
+	margin-right: 8px;
+}
+
+.header__menu a {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+.header__menu ul {
+	list-style: none;
+	margin-top: 16px;
+}
+
+.header__menu ul > li {
+	border-bottom: 1px solid #FFFFFF;
+	line-height: 3.5;
+	margin-left: 4px;
+}
+
+.header__menu ul > li:last-child {
+	border-bottom: none;
+}
+
+/*printCare*/
+.printCare img {
+	margin-bottom: 8px;
+}
+
+.printCare .title {
+	color: #64A315;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.printCare {
+	padding-bottom: 15px;
+	padding-left: 8px;
+	padding-right: 8px;
+	position: relative;
+}
+
+.printCare .caption {
+	color: #111827;
+	font-weight: 500;
+	font-size: 14px;
+	line-height: 18px;
+	margin-bottom: 8px;
+	min-height: 36px;
+}
+
+.printCare .slider__item {
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+	margin-right: 16px;
+	display: flex;
+	flex-direction: column;
+	background: white;
+	min-width: 240px;
+	padding: 8px;
+}
+
+.printCare .slider {
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+	width: calc(100% + 16px);
+	margin-left: -8px;
+}
+
+.printCare .slider__wrapper {
+	overflow: scroll;
+	display: flex;
+	margin-left: 8px;
+}
+
+.printCare .btn {
+	background: #64A315;
+	color: #FFFFFF;
+}
+
+/*news*/
+.news {
+	padding-left: 8px;
+	padding-right: 8px;
+	position: relative;
+}
+
+.news .caption {
+	font-size: 14px;
+	color: #6B7280;
+	line-height: 20px;
+	font-weight: 400;
+	margin-bottom: 24px;
+}
+
+.news .caption span {
+	display: inline-block;
+}
+
+.news .caption img {
+	width: 16px;
+	position: relative;
+	top: -2px;
+	margin-left: 5px;
+	margin-right: -1px;
+}
+
+.news .seeAll {
+	color: #2563EB;
+}
+
+.news__item img {
+	width: calc(100% + 6px);
+	margin: 0 -3px -3px;
+}
+
+/*plantsAndFlowers*/
+.plantsAndFlowers .item__rating {
+	width: 44px;
+	height: 16px;
+	background: #F59E0B;
+	margin: -8px auto 8px;
+	margin-top: -8px;
+	color: #FFFFFF;
+	font-weight: 500;
+	font-size: 12px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	border-radius: 2px;
+}
+
+.plantsAndFlowers .item__rating img {
+	margin-top: -1px;
+	margin-right: -7px;
+}
+
+.plantsAndFlowers .list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.plantsAndFlowers .item {
+	height: 201px;
+	width: 47%;
+	box-shadow: 0px 2px 4px rgba(17, 24, 39, 0.08);
+	border-radius: 8px;
+	text-align: center;
+	background: #FFFFFF;
+	margin-bottom: 16px;
+	position: relative;
+}
+
+.plantsAndFlowers .item__img {
+	border-radius: 8px 8px 0 0;
+	background-color: #111827;
+	height: 86px;
+	background-repeat: no-repeat;
+}
+
+.plantsAndFlowers .item:nth-child(1) .item__img {
+	background-image: url('../img/orchid.png');
+	background-position: center -1px;
+}
+
+.plantsAndFlowers .item:nth-child(2) .item__img {
+	background-image: url('../img/pions.png');
+	background-position: center 5px;
+}
+
+.plantsAndFlowers .item:nth-child(3) .item__img {
+	background-image: url('../img/aloe.png');
+	background-position: center 3px;
+}
+
+.plantsAndFlowers .item:nth-child(4) .item__img {
+	background-image: url('../img/chrys.png');
+	background-position: center 4px;
+}
+
+.plantsAndFlowers {
+	padding: 0 8px;
+	position: relative;
+	margin-bottom: 23px;
+}
+
+.plantsAndFlowers .title {
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.plantsAndFlowers .btn {
+	min-width: 128px;
+	margin: 0 8px 8px;
+	background: #E2FEDB;
+	color: #6BA91A;
+	position: absolute;
+	bottom: 0px;
+	width: calc(100% - 16px);
+}
+
+/*recomendations*/
+.recommendations {
+	padding: 24px 8px 32px;
+}
+
+.recommendations .slider__wrapper {
+	overflow: scroll;
+	display: flex;
+}
+
+.recommendations .slider__item {
+	min-width: 128px;
+	margin-right: 16px;
+	text-align: center;
+	margin-left: 8px;
+}
+
+.recommendations .slider__item:last-child {
+	margin-right: 8px;
+}
+
+.recommendations .slider__item > div:nth-child(2) {
+    font-weight: 500;
+    color: #111827;
+    line-height: 20px;
+    font-size: 16px;
+}
+
+.recommendations .slider__item > div:nth-child(1) {
+	min-width: 128px;
+	height: 80px;
+	border-radius: 8px;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.08);
+	margin-right: 16px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.recommendations .slider {
+	-ms-overflow-style: none;
+	overflow: -moz-scrollbars-none;
+	width: calc(100% + 16px);
+	margin-left: -8px;
+	margin-bottom: 16px;
+}
+
+.recommendations .slider__wrapper::-webkit-scrollbar, 
+.printCare .slider__wrapper::-webkit-scrollbar {
+	width: 0;
+}
+
+.recommendations .banner {
+	display: flex;
+	height: 100px;
+	background: linear-gradient(180deg, #CBD623 0%, #41701E 100%);
+	border-radius: 8px;
+	justify-content: space-between;
+	padding: 8px 15px 8px 15px;
+}
+
+.recommendations .banner .description > div {
+	color: #FFFFFF;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.recommendations .banner .description > p {
+	color: rgba(255, 255, 255, 0.5);
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 20px;
+}
+
+/*footer*/
+footer {
+	background: #111827;
+	height: 120px;
+	display: flex;
+	justify-content: space-between;
+	padding:  16px 16px 24px 16px;
+}
+
+footer p {
+	color: #6B7280;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 20px;
+}
+
+footer img {
+	width: 48px;
+	height: 48px;
+	margin-right: 16px;
+}
